@@ -471,21 +471,164 @@ body {
     // Write Page
 
     .add {
-      margin-top: 20px;
+      margin-top: 32px;
       display: flex;
-      gap: 20px;
+      gap: 32px;
 
       .content {
         flex: 5;
+        background: #fff;
+        padding: 32px 28px 28px 28px;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        input[type="text"] {
+          font-size: 1.25rem;
+          font-weight: 600;
+          border: none;
+          border-bottom: 2px solid #b2d8d8;
+          padding: 12px 4px 10px 4px;
+          margin-bottom: 12px;
+          outline: none;
+          color: #035d67;
+          background: transparent;
+          transition: border-color 0.2s;
+        }
+        input[type="text"]:focus {
+          border-bottom: 2px solid #0a7c78;
+        }
+
+        .editorContainer {
+          min-height: 220px;
+          .editor {
+            min-height: 180px;
+            .ql-container {
+              min-height: 180px;
+              font-size: 1.05rem;
+            }
+          }
+        }
       }
 
       .menu {
         flex: 2;
+        background: #fff;
+        padding: 24px 18px;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 18px;
+        gap: 24px;
+
+        .item {
+          background: #f8f8f8;
+          border-radius: 6px;
+          padding: 18px 14px 16px 14px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        h3 {
+          font-size: 1.08rem;
+          color: #035d67;
+          font-weight: 600;
+          margin-bottom: 6px;
+        }
+        span,
+        label {
+          font-size: 0.98rem;
+          color: #444;
+        }
+        .upload-btn {
+          background: #0a7c78;
+          color: #fff;
+          border: none;
+          padding: 7px 18px;
+          font-size: 0.97rem;
+          font-weight: 500;
+          border-radius: 20px;
+          cursor: pointer;
+          margin-top: 8px;
+          margin-bottom: 4px;
+          display: inline-block;
+          transition: background 0.2s;
+        }
+        .upload-btn:hover {
+          background: #06645f;
+        }
+        .filename {
+          font-size: 0.93rem;
+          color: #0a7c78;
+          margin-left: 6px;
+        }
+        .publish-btn {
+          background: #035d67;
+          color: #fff;
+          border: none;
+          padding: 9px 22px;
+          font-size: 1rem;
+          font-weight: 600;
+          border-radius: 20px;
+          cursor: pointer;
+          margin-top: 10px;
+          align-self: flex-end;
+          transition: background 0.2s;
+        }
+        .publish-btn:hover {
+          background: #0a7c78;
+        }
+        .cat-list {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          margin-top: 6px;
+        }
+        .cat-list label {
+          font-size: 0.97rem;
+          color: #035d67;
+          font-weight: 500;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        .cat-list input[type="radio"] {
+          accent-color: #0a7c78;
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      gap: 18px;
+      .content,
+      .menu {
+        min-width: 0;
+        padding: 18px 8px;
+        border-radius: 6px;
+      }
+    }
+    @media (max-width: 600px) {
+      .content,
+      .menu {
+        padding: 10px 2px;
+        border-radius: 4px;
+      }
+      .content input[type="text"] {
+        font-size: 1.05rem;
+        padding: 8px 2px 8px 2px;
+      }
+      .menu .item {
+        padding: 10px 4px 10px 4px;
+      }
+      .publish-btn,
+      .upload-btn {
+        padding: 6px 12px;
+        font-size: 0.92rem;
       }
     }
   }
