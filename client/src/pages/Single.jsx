@@ -1,4 +1,5 @@
 import React from 'react'
+import Menu from '../components/Menu'
 
 const Single = () => {
   return (
@@ -29,7 +30,7 @@ const Single = () => {
 
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum omnis, facere officiis ad animi expedita et dolores eum adipisci. Sed praesentium necessitatibus tenetur voluptatibus itaque recusandae officia debitis officiis ipsam sit dignissimos nulla, vitae tempora totam odit hic dicta impedit sapiente, perferendis odio cum iste similique! Recusandae amet qui, vitae, nesciunt dolores eaque sunt quibusdam aspernatur est maxime iusto atque.</p>
       </div>
-      <div className="menu">m</div>
+      <Menu />
     </div>
   )
 }

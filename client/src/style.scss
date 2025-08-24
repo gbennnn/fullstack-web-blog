@@ -367,39 +367,104 @@ body {
         border-radius: 8px;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         min-height: 400px;
-        font-size: 1.1rem;
-        color: #035d67;
-        font-weight: 500;
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-      }
-      @media (max-width: 900px) {
-        flex-direction: column;
         gap: 18px;
-        .content,
-        .menu {
-          min-height: unset;
+
+        h1 {
+          font-size: 1.18rem;
+          color: #035d67;
+          font-weight: 600;
+          margin-bottom: 18px;
         }
-      }
-      @media (max-width: 600px) {
-        .content,
-        .menu {
-          padding: 12px 6px;
+
+        .post {
+          width: 100%;
+          background: #f8f8f8;
+          border-radius: 6px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+          margin-bottom: 18px;
+          padding: 12px 10px 16px 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          transition: box-shadow 0.2s;
+        }
+        .post:hover {
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        .post img {
+          width: 100%;
+          height: 120px;
+          object-fit: cover;
           border-radius: 4px;
         }
-        .content > img {
-          max-height: 180px;
+        .post h2 {
+          font-size: 1.05rem;
+          font-weight: 600;
+          color: #035d67;
+          margin: 6px 0 2px 0;
         }
-        .user > img {
-          width: 38px;
-          height: 38px;
+        .post p {
+          font-size: 0.93rem;
+          color: #666;
+          margin: 0 0 6px 0;
         }
-        .user .edit a,
-        .user .delete a {
-          padding: 5px 10px;
-          font-size: 0.9rem;
+        .post button {
+          background: #0a7c78;
+          color: #fff;
+          border: none;
+          padding: 7px 18px;
+          font-size: 0.97rem;
+          font-weight: 500;
+          border-radius: 20px;
+          cursor: pointer;
+          margin-top: 4px;
+          transition: background 0.2s;
         }
+        .post button:hover {
+          background: #06645f;
+        }
+      }
+    }
+    @media (max-width: 900px) {
+      flex-direction: column;
+      gap: 18px;
+      .content,
+      .menu {
+        min-height: unset;
+      }
+    }
+    @media (max-width: 600px) {
+      .content,
+      .menu {
+        padding: 12px 6px;
+        border-radius: 4px;
+      }
+      .content > img {
+        max-height: 180px;
+      }
+      .user > img {
+        width: 38px;
+        height: 38px;
+      }
+      .user .edit a,
+      .user .delete a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+      }
+      .menu .post img {
+        height: 80px;
+      }
+      .menu .post h2 {
+        font-size: 0.98rem;
+      }
+      .menu .post button {
+        padding: 5px 12px;
+        font-size: 0.9rem;
       }
     }
   }
