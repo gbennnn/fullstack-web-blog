@@ -2,7 +2,13 @@ import React from 'react'
 
 const Write = () => {
   return (
-    <div>Write</div>
+    <div className='add'>
+      <div className="content">content</div>
+      <div className="menu">
+        <div className="item">i1</div>
+        <div className="item">i2</div>
+      </div>
+    </div>
   )
 }
 
