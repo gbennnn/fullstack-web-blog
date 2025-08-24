@@ -52,6 +52,7 @@ const Write = () => {
             style={{ display: 'none' }}
             type="file"
             id="file"
+            accept='image/*'
             onChange={handleFileChange}
           />
           <label htmlFor="file" className="upload-btn">Upload Image</label>
